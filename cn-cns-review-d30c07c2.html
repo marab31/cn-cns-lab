@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>c7c7.app · 一份简明指南</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #2c2c2c;
+            background-color: #f4f3ef;
+        }
+
+        /* 深色头图 */
+        .hero {
+            background: linear-gradient(145deg, #1d1b1a 0%, #2f2b28 100%);
+            color: #ede7dd;
+            padding: 4rem 1.5rem 3.2rem;
+            text-align: center;
+            border-bottom: 4px solid #b89b6e;
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 350;
+            letter-spacing: 0.04em;
+            margin-bottom: 0.4rem;
+        }
+
+        .hero .tagline {
+            font-size: 1.2rem;
+            color: #c7b295;
+            font-weight: 300;
+        }
+
+        .hero .highlight {
+            color: #e3c69a;
+        }
+
+        /* 浅色正文区 */
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 2.8rem 1.8rem 3.6rem;
+        }
+
+        .intro {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 2.2rem 2.2rem 1.8rem;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.03);
+            margin-bottom: 2.4rem;
+        }
+
+        .intro p {
+            font-size: 1.08rem;
+            margin-bottom: 1.2rem;
+            color: #3e3b38;
+        }
+
+        .intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .intro a {
+            color: #b27d48;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .intro a:hover {
+            border-bottom-color: #b27d48;
+            color: #7e5d34;
+        }
+
+        .feature-card {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.8rem 2rem 1.6rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            border-left: 5px solid #c0a074;
+        }
+
+        .feature-card h2 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #2b2723;
+            margin-bottom: 1rem;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 0.7rem 0 0.7rem 2rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="%23b89b6e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center no-repeat;
+            background-size: 16px;
+            font-size: 1.02rem;
+            color: #36322e;
+        }
+
+        .faq-summary {
+            background: #faf9f6;
+            border-radius: 20px;
+            padding: 1.8rem 2rem 1.6rem;
+            margin: 2.4rem 0 1.6rem;
+            border: 1px solid #e6dfd6;
+        }
+
+        .faq-summary h3 {
+            font-size: 1.2rem;
+            font-weight: 450;
+            color: #2f2a25;
+            margin-bottom: 0.8rem;
+        }
+
+        .faq-summary p {
+            font-size: 0.98rem;
+            color: #4e4943;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-summary p:last-child {
+            margin-bottom: 0;
+        }
+
+        .footer-note {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 1.6rem 2rem;
+            margin-top: 2.2rem;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #6f675f;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        .footer-note a {
+            color: #b27d48;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-note a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 2.8rem 1rem 2.2rem;
+            }
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            .container {
+                padding: 1.8rem 1rem 2.4rem;
+            }
+            .intro, .feature-card, .faq-summary, .footer-note {
+                padding-left: 1.2rem;
+                padding-right: 1.2rem;
+            }
+            .feature-list li {
+                padding-left: 1.6rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>c7c7.app</h1>
+        <p class="tagline">一个名字，带你靠近答案</p>
+    </section>
+
+    <div class="container">
+        <div class="intro">
+            <p>有时候你只是想快速弄明白一个网站究竟是做什么的，而不是在首页里猜谜。<strong>c7c7.app</strong> 就属于那种一眼看过去，名字简单，但背后内容却可以很丰富的站点。它不靠夸张的标语吸引你，而是让你在浏览过程中自己发现价值。</p>
+            <p>无论你是因为偶然看到一串字符，还是被朋友提起，来到 <a href="https://cn-cns-c7c7app.com">c7c7.app</a> 的那一刻，都会感受到一种「对，就是这里」的直觉。它没有多余的杂音，页面干净、指向明确，用起来省心。</p>
+        </div>
+
+        <div class="feature-card">
+            <h2>它有哪些特点？</h2>
+            <ul class="feature-list">
+                <li><strong>直接</strong> —— 没有复杂菜单，没有弹窗广告，你关心的内容就在眼前。</li>
+                <li><strong>轻量</strong> —— 页面加载快，不拖泥带水，适合性子急的人。</li>
+                <li><strong>友好</strong> —— 不管你是头一次来还是常客，界面始终温柔相待。</li>
+                <li><strong>聚焦</strong> —— 它只做一件事，但把这件事做到位，不贪多。</li>
+            </ul>
+        </div>
+
+        <div class="faq-summary">
+            <h3>常见疑问 · 一瞥</h3>
+            <p><strong>Q：这个网站需要注册吗？</strong> —— 大部分功能无需注册，直接使用即可，部分附加服务可能需要简单登记。</p>
+            <p><strong>Q：移动端体验如何？</strong> —— 响应式设计，手机和电脑上都排版自然，不会出现文字挤到一起的情况。</p>
+            <p><strong>Q：网站安全吗？</strong> —— 采用常见的加密传输，日常使用不必担忧。但像任何网站一样，注意保护个人隐私总是好的。</p>
+        </div>
+
+        <div class="footer-note">
+            <p>如果你想亲自感受这种简洁的节奏，不妨直接去 <a href="https://cn-cns-c7c7app.com">c7c7.app</a> 逛一圈。它也许就是你一直在找的那个——不吵闹、不绕路、刚好够用的地方。</p>
+        </div>
+    </div>
+</body>
+</html>
